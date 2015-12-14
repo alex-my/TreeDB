@@ -1,0 +1,11 @@
+# check setup.py file
+python setup.py check
+
+# create package
+python setup.py sdist
+
+# in package root path, register package to pypi
+python setup.py register
+
+# upload package
+python setup.py sdist upload
