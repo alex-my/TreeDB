@@ -8,6 +8,7 @@ class DBPool(object):
         self._pool_name = pool_name
         self._pool_size = pool_size
         self._db_config = db_config
+        self._pool = None
 
     def init_connection(self):
         try:

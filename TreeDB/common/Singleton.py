@@ -15,7 +15,6 @@ def singleton(cls, *args, **kwargs):
 if __name__ == '__main__':
     @singleton
     class SingletonTest(object):
-        def print_data(self):
-            print 'here is'
+        data = 5
 
-    SingletonTest().print_data()
+    SingletonTest().data = 2

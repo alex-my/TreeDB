@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # coding:utf8
 from mysql.connector import errors
-from common.Singleton import singleton
-from core.DBPool import DBPool
+from TreeDB.common.Singleton import singleton
+from TreeDB.core.DBPool import DBPool
 
 
 @singleton
@@ -10,7 +10,7 @@ class DBPoolManager(object):
     def __init__(self):
         self._pools = {}
 
-    def registe_pool(self, pool_name=None, pool_size=5, **db_config):
+    def register_pool(self, pool_name=None, pool_size=5, **db_config):
         if pool_name is None:
             raise errors.PoolError(
                 'pool_name can not be none')
@@ -42,11 +42,11 @@ if __name__ == '__main__':
         'port': 3306,
         'database': 'learn_server'
     }
-    flag = DBPoolManager().registe_pool(pool_name='test_learn_server',
-                                        pool_size=3,
-                                        **db_config)
+    flag = DBPoolManager().register_pool(pool_name='test_learn_server',
+                                         pool_size=3,
+                                         **db_config)
     if not flag:
-        print 'registe pool failed'
+        print 'register pool failed'
         exit(1)
     pool = DBPoolManager().get_pool('test_learn_server')
     if not pool:
