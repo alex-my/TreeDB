@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: TreeDB
+Version: 0.0.6
+Summary: be easy to use mysql driver.
+Home-page: git@github.com:alex-my/TreeDB.git
+Author: Alex
+Author-email: alex_my@126.com
+License: MIT
+Description: 
+        
+        
+Keywords: TreeDB
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2.7
